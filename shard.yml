@@ -1,0 +1,11 @@
+name: crystal2048
+version: 0.0.0
+
+authors:
+    - AregevDev <aregevdev@gmail.com>
+
+targets:
+    2048-cr:
+        main: src/2048-cr.cr
+
+crystal: 0.32.1

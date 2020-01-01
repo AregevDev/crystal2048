@@ -1,0 +1,8 @@
+# Dir
+/docs
+/lib
+/bin
+/.shards
+
+# Files
+*.dwarf
