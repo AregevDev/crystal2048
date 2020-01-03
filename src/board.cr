@@ -6,26 +6,26 @@ module Crystal2048
     def initialize(n : Int32)
         @size = n
         @elements = Array(Int32).new(@size * @size, 0)
+
+        fill
     end
 
     def fill
-        locs = (0..16).to_a.sample(2)
+        locs = (0...15).to_a.sample(2)
         
         locs.each do |loc|
             @elements[loc] = [2, 4].shuffle[0]
         end
     end
 
-    def to_s
-        result = "\n"
+    def to_s(io)
         @elements.each_with_index do |elem, i|
             if (i % @size == 0 && i != 0)
-            result += '\n'
+            io << '\n'
             end
-            result += "[#{elem}]"
+            io << "[#{elem}]"
         end
 
-        result
         end
     end
 end
