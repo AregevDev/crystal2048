@@ -1,4 +1,4 @@
-require "./board"
+require "./game-manager"
 
 module Crystal2048
   extend self
@@ -6,12 +6,11 @@ module Crystal2048
   VERSION = "0.0.0"
 
   def welcome
-    puts "Welcome to my 2048 game"
+    puts "Welcome to my 2048 game\n"
   end
 end
 
 Crystal2048.welcome
 
-gameBoard = Crystal2048::Board.new(4)
-gameBoard.fill
-puts gameBoard.to_s
+game = Crystal2048::GameManager.new(4)
+game.start_game
