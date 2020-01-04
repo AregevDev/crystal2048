@@ -1,13 +1,13 @@
 require "./game-manager"
 
 module Crystal2048
-  extend self
+    extend self
 
-  VERSION = "0.0.0"
+    VERSION = "0.0.0"
 
-  def welcome
-    puts "Welcome to my 2048 game\n"
-  end
+    def welcome
+        puts "Welcome to my 2048 game\n"
+    end
 end
 
 Crystal2048.welcome
